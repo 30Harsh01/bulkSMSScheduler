@@ -115,6 +115,3 @@ The frontend provides an interface to create SMS campaigns, schedule executions,
 This project is for learning and internal use. Licensing can be added as required.
 
 ---
-
-✅ **Just save this as `README.md` and you’re done.**
-If you want a **YAML version**, **Docker setup**, or **API docs**, I can generate those next.
