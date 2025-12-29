@@ -1,3 +1,4 @@
+
 ---
 
 # Automatic SMS Scheduler
@@ -23,15 +24,15 @@
 
 ### Backend
 
-* **Node.js (Express)**
-* **MongoDB**
-* **BullMQ (Redis)**
-* **JWT Authentication**
+* Node.js (Express)
+* MongoDB
+* BullMQ (Redis)
+* JWT Authentication
 
 ### Frontend
 
-* **React (Vite)**
-* **Tailwind CSS**
+* React (Vite)
+* Tailwind CSS
 
 ---
 
@@ -41,42 +42,31 @@ This service handles campaign creation, scheduling logic, queue processing, and 
 
 ### How to Run the Backend
 
-1️⃣ Clone the repository and navigate to the backend directory:
+1. Clone the repository and navigate to the backend directory
+   `cd datmanBackend`
 
-```bash
-cd datmanBackend
-```
+2. Install dependencies
+   `npm install`
 
-2️⃣ Install dependencies:
+3. Create a `.env` file and configure environment variables
 
-```bash
-npm install
-```
+   PORT=your_port
+   MONGOURI=your_mongodb_uri
+   REDIS_HOST=your_redis_host
+   REDIS_PORT=your_redis_port
+   REDIS_PASSWORD=your_redis_password
+   REDIS_HOST_URL=your_redis_host_url
+   JWT_SECRET=your_jwt_secret
+   MAIL=your_email
+   MAILPASS=your_email_password
 
-3️⃣ Create a `.env` file and configure environment variables:
-
-```env
-PORT=your_port
-MONGOURI=your_mongodb_uri
-REDIS_HOST=your_redis_host
-REDIS_PORT=your_redis_port
-REDIS_PASSWORD=your_redis_password
-REDIS_HOST_URL=your_redis_host_url
-JWT_SECRET=your_jwt_secret
-MAIL=your_email
-MAILPASS=your_email_password
-```
-
-4️⃣ Start the backend server:
-
-```bash
-cd src && nodemon index.js
-```
+4. Start the backend server
+   `cd src && nodemon index.js`
 
 ### Important Notes
 
-* Ensure the `.env` file is correctly configured.
-* **Redis must be running** for queue-based campaign processing.
+* Ensure the `.env` file is correctly configured
+* **Redis must be running** for queue-based campaign processing
 
 ---
 
@@ -86,38 +76,27 @@ The frontend provides an interface to create SMS campaigns, schedule executions,
 
 ### How to Run the Frontend
 
-1️⃣ Navigate to the frontend directory:
+1. Navigate to the frontend directory
+   `cd datmanFrontend`
 
-```bash
-cd datmanFrontend
-```
+2. Install dependencies
+   `npm install`
 
-2️⃣ Install dependencies:
+3. Create a `.env` file and add the API base URL
 
-```bash
-npm install
-```
+   VITE_API_BASE_URL=your_base_api_url
 
-3️⃣ Create a `.env` file and add the API base URL:
-
-```env
-VITE_API_BASE_URL=your_base_api_url
-```
-
-4️⃣ Start the development server:
-
-```bash
-npm run dev
-```
+4. Start the development server
+   `npm run dev`
 
 ---
 
 ## 🔄 Application Flow
 
-1. Create an **SMS campaign**
-2. Add **shoppers (recipients)** using email IDs
+1. Create an SMS campaign
+2. Add shoppers (recipients) using email IDs
 3. Schedule the campaign or trigger it manually
-4. Jobs are queued using **BullMQ**
+4. Jobs are queued using BullMQ
 5. SMS messages are processed and sent asynchronously
 
 ---
@@ -136,3 +115,6 @@ npm run dev
 This project is for learning and internal use. Licensing can be added as required.
 
 ---
+
+✅ **Just save this as `README.md` and you’re done.**
+If you want a **YAML version**, **Docker setup**, or **API docs**, I can generate those next.
